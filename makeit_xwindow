@@ -1,0 +1,26 @@
+CPPFLAGS="-O3"
+
+CPPFLAGS="$CPPFLAGS -DXWINDOW"
+
+LDFLAGS="-lEGL -lX11 -lGLESv2"
+
+g++ -c -O3 esTransform.c -o esTransform.o $CPPFLAGS
+g++ -c -O3 f_native.cpp -o f_native.o $CPPFLAGS
+g++ -c -O3 f_egl.cpp -o f_egl.o $CPPFLAGS
+g++ -c -O3 glsutil.c -o glsutil.o $CPPFLAGS
+g++ -c -O3 matrix.c -o matrix.o $CPPFLAGS
+
+g++ -c -O3 main_vbo.cpp -o main_vbo.o $CPPFLAGS
+g++ -c -O3 main_diablo.cpp -o main_diablo.o $CPPFLAGS
+g++ -c -O3 main_gears.cpp -o main_gears.o $CPPFLAGS
+g++ -c -O3 main_cube_textured.cpp -o main_cube.o $CPPFLAGS
+g++ -c -O3 main_gles.cpp -o main_gles.o $CPPFLAGS
+g++ -c -O3 main_many_cubes.cpp -o main_many_cubes.o $CPPFLAGS
+
+g++ f_egl.o f_native.o main_vbo.o esTransform.o glsutil.o -o run_ninja.exe $LDFLAGS
+g++ f_egl.o f_native.o main_diablo.o esTransform.o glsutil.o -o run_diablo.exe $LDFLAGS
+g++ f_egl.o f_native.o main_gears.o esTransform.o glsutil.o -o run_gears.exe $LDFLAGS
+g++ f_egl.o f_native.o main_cube.o esTransform.o glsutil.o matrix.o -o run_cube.exe $LDFLAGS
+g++ f_egl.o f_native.o main_gles.o esTransform.o glsutil.o matrix.o -o run_gles.exe $LDFLAGS
+g++ f_egl.o f_native.o main_many_cubes.o esTransform.o glsutil.o matrix.o -o run_mcubes.exe $LDFLAGS
+
