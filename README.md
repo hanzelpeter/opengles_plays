@@ -10,4 +10,7 @@ makeit_xwindow will compile for xwindow (you need to enable experimetal OpenGL d
 <p align="center">
   <img src="images/ninja.png"/>
   <img src="images/gears.png"/>
+  <img src="images/diablo.png"/>
+  <img src="images/cubes.png"/>
+  <img src="images/cube.png"/>
 </p>
