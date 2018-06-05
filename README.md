@@ -6,3 +6,8 @@ Download or clone and chmod +x ./makeit_*
 
 makeit_raspi will compile for console (using libbrcmGLESv2)
 makeit_xwindow will compile for xwindow (you need to enable experimetal OpenGL driver)
+
+<p align="center">
+  <img src="images/ninja.png"/>
+  <img src="images/gears.png"/>
+</p>
