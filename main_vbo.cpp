@@ -529,7 +529,7 @@ InitBuffer();
 
     swapBuffers();
 
-    usleep(8500);
+    //usleep(8500);
 
     fps++;
     gettimeofday(&now, NULL);
