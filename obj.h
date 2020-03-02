@@ -24,6 +24,7 @@ class OBJObject
 public:
     OBJObject(void)
     {
+        raw = NULL;
 	count = 0;
     }
 
@@ -100,6 +101,7 @@ public:
 
 		}
 	}
+	fclose(f);
 
 	for (unsigned int i=0; i<vertexIndices.size(); i++) {
 		unsigned int vertexIndex = vertexIndices[i];
@@ -147,7 +149,12 @@ public:
 
     bool Free(void)
     {
+	    free(raw);
+	    raw = NULL;
+	    count = 0;
+	    return true;
     }
+
 
     unsigned int GetAttributeCount(void) const
     {
