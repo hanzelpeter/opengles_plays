@@ -17,6 +17,7 @@ g++ -c -O3 main_cube_textured.cpp -o main_cube.o $CPPFLAGS
 g++ -c -O3 main_gles.cpp -o main_gles.o $CPPFLAGS
 g++ -c -O3 main_many_cubes.cpp -o main_many_cubes.o $CPPFLAGS
 g++ -c -O3 main_spiral.cpp -o main_spiral.o $CPPFLAGS
+g++ -c -O3 main_vbo_goblin.cpp -o main_goblin.o $CPPFLAGS
 
 g++ f_egl.o f_native.o main_vbo.o esTransform.o glsutil.o -o run_ninja.exe $LDFLAGS
 g++ f_egl.o f_native.o main_diablo.o esTransform.o glsutil.o -o run_diablo.exe $LDFLAGS
@@ -25,4 +26,5 @@ g++ f_egl.o f_native.o main_cube.o esTransform.o glsutil.o matrix.o -o run_cube.
 g++ f_egl.o f_native.o main_gles.o esTransform.o glsutil.o matrix.o -o run_gles.exe $LDFLAGS
 g++ f_egl.o f_native.o main_many_cubes.o esTransform.o glsutil.o matrix.o -o run_mcubes.exe $LDFLAGS
 g++ f_egl.o f_native.o main_spiral.o -o run_spiral.exe $LDFLAGS
+g++ f_egl.o f_native.o main_goblin.o esTransform.o glsutil.o matrix.o -o run_goblin.exe $LDFLAGS
 
