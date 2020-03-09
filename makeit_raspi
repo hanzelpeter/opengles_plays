@@ -27,4 +27,3 @@ g++ f_egl.o f_native.o main_gles.o esTransform.o glsutil.o matrix.o -o run_gles.
 g++ f_egl.o f_native.o main_many_cubes.o esTransform.o glsutil.o matrix.o -o run_mcubes.exe $LDFLAGS
 g++ f_egl.o f_native.o main_spiral.o -o run_spiral.exe $LDFLAGS
 g++ f_egl.o f_native.o main_goblin.o esTransform.o glsutil.o matrix.o -o run_goblin.exe $LDFLAGS
-g

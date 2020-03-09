@@ -431,7 +431,7 @@ void Render()
     GLint uvAttrib = rs.texcoordLoc;
 
     // calculate the view matrix from the pitch and yaw of mouse movements
-    vec4 target = vec4(0,55,0,0);
+    vec4 target = vec4(0,40,0,0);
     vec4 scale = vec4(1.0,1.0,1.0,0.0);
     mat4 yawmtx(mat4::rotate(rs.yaw, vec4(0,1,0,0)));
     mat4 pitchmtx(mat4::rotate(rs.pitch, vec4(1,0,0,0)));
